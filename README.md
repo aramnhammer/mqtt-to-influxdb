@@ -1,10 +1,11 @@
+[![Rust](https://github.com/aramnhammer/mqtt-to-influxdb/actions/workflows/rust.yml/badge.svg?branch=main)](https://github.com/aramnhammer/mqtt-to-influxdb/actions/workflows/rust.yml)
+
 # mqtt-to-influxdb
 An MQTT to Influxdb2 pusher designed to understand the ADAFRUIT mqtt topic format for time series data.
 
-NOTE: `bootstrap.sh` will reset any database currently configured on a system. 
-
 # Production
 Potential production deployment method (No SSL/TLS)
+NOTE: `bootstrap.sh` will reset any database currently configured on a system. 
 
 - Add a persistant volume to the influxdb service under `tools/docker-compose.yaml`
 - Edit the `bootstrap.sh` script changing the following values to your desired ones:
