@@ -1,0 +1,17 @@
+version: '2'
+services:
+  mqtt_server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mqtt_server
+    ports:
+      - '3030:3030'
+      - '1883:1883'
+    environment:
+      - DB_SERVER_HOST=http://influxdb2:8086
+
+networks:
+  default:
+    external:
+      name: 'backend-net'
