@@ -1,0 +1,7 @@
+[workspace]
+
+members = [
+    "mqtt_server",
+    "environ",
+    "influx_client",
+]
